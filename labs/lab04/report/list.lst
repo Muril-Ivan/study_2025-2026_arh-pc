@@ -1,0 +1,18 @@
+     1                                  SECTION .data
+     2 00000000 D09CD183D180D18BD0-     	hello:      db "Мурылев Иван",0xa 
+     2 00000009 BBD0B5D0B220D098D0-
+     2 00000012 B2D0B0D0BD0A       
+     3                                  		helloLen:   equ $ - hello
+     4                                  SECTION .text
+     5                                  	global _start           
+     6                                  
+     7                                  _start:                 
+     8 00000000 B804000000                      mov eax, 4      
+     9 00000005 BB01000000                      mov ebx, 1    
+    10 0000000A B9[00000000]                    mov ecx, hello
+    11 0000000F BA18000000                      mov edx, helloLen
+    12 00000014 CD80                            int 0x80        
+    13                                  	
+    14 00000016 B801000000              	mov eax, 1       
+    15 0000001B BB00000000                      mov ebx, 0      
+    16 00000020 CD80                            int 0x80        
