@@ -1,5 +1,4 @@
 SECTION .data
-	hello:      db "Мурылев Иван",0xa 
 		helloLen:   equ $ - hello
 SECTION .text
 	global _start           
