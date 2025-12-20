@@ -17,11 +17,8 @@ _start: ; Точка входа в программу
 
 mov eax, msg
 call sprintLF
-
 mov ecx, buf1
-
 mov edx, 80
-
 call sread
 mov eax,buf1
 call sprint
